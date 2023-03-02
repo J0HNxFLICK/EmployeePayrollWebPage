@@ -25,6 +25,7 @@ body
 
 .LogoText
 {
+    color: #42515F;
     font: normal normal bold 20px/21px Montserrat;
     opacity: 1;
 }
@@ -107,23 +108,104 @@ body
     width: 80%;
 }
 
-.ColomnNamesBG
+.MainTable
 {
-    display: flex;
     width: 100%;
-    height: 67px;
-    background: #42515F 0% 0% no-repeat padding-box;
-    border-radius: 3px 3px 0px 0px;
-    align-items: center;
 }
 
-.ColomnName
+.TableHeadders
 {
-    font: normal normal medium 20px/24px Roboto;
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background: #42515F 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+    padding-left: 30px;
+}
+
+.TableHeaderTextStyle
+{
+    text-align: left;
+    font-size: 15px;
+    font-family: Roboto;
+    letter-spacing: 0px;
     color: #FFFFFF;
 }
 
-.one
+.ProfilePicColomn
 {
-    margin-left: 100px;
+    flex-basis: 6%;
+}
+
+.NameColomn
+{
+    flex-basis: 26%;
+}
+
+.GenderColomn
+{
+    flex-basis: 20%;
+}
+
+.DepartmentColomn
+{
+    flex-basis: 20%;
+}
+
+.SalaryColomn
+{
+    flex-basis: 10%;
+}
+
+.StartDateColomn
+{
+    flex-basis: 10%;
+}
+
+.ActionsColomn
+{
+    flex-basis: 8%;
+}
+
+.UserDataRow
+{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E3E3E3;
+    padding-left: 30px;
+    margin-bottom: 2px;
+}
+
+.UserDataText
+{
+    font: normal normal normal 14px/19px Roboto;
+    color: #3D3D3D;
+}
+
+.UserDataDept
+{
+    display: flex;
+}
+
+.DeptStyle
+{
+    background: #e2ff82 0% 0% no-repeat padding-box;
+    padding: 2px 8px;
+    border-radius: 9px;
+    font: normal normal normal 13px/18px Roboto;
+    letter-spacing: 0px;
+    color: #3D3D3D;
+    margin-right: 6px;
+}
+
+.UserDataActions
+{
+    display: flex;
+}
+
+.EditImage
+{
+    margin-left: 30px;
 }
