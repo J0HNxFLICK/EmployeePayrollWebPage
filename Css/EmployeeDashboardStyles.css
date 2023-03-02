@@ -1,0 +1,129 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+
+body
+{
+    background-color: #F7F7F7;
+    margin: 0px;
+}
+
+.Header
+{
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+}
+
+.InsideHeader
+{
+    display: flex;
+    align-items: center;
+    padding-left: 9%;
+}
+
+.LogoText
+{
+    font: normal normal bold 20px/21px Montserrat;
+    opacity: 1;
+}
+
+.TextEmployee
+{
+    color: #82A70C;
+}
+
+.TitleAndButtonsParent
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.TitleAndButtons
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.TitleEMPdetails
+{
+    font: normal normal bold 25px/35px Roboto;
+    color: #42515F;
+}
+
+.SearchandAddButtons
+{
+    display: flex;
+}
+
+.searchButton
+{
+    width: 77px;
+    height: 50px;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 3px #00000029;
+    border-radius: 28px;
+    opacity: 1;
+    border: 1px solid #F5F5F5;
+}
+
+.addUserButton
+{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #82A70C 0% 0% no-repeat padding-box;
+    border-radius: 5px;
+    border: 1px solid #82A70C;
+    margin-left: 20px;
+}
+
+.addUserText
+{
+    font: normal normal normal 22px/29px Roboto;
+    color: #FFFFFF;
+}
+
+.DetailsContentParent
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.DetailsContent
+{
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.ColomnNamesBG
+{
+    display: flex;
+    width: 100%;
+    height: 67px;
+    background: #42515F 0% 0% no-repeat padding-box;
+    border-radius: 3px 3px 0px 0px;
+    align-items: center;
+}
+
+.ColomnName
+{
+    font: normal normal medium 20px/24px Roboto;
+    color: #FFFFFF;
+}
+
+.one
+{
+    margin-left: 100px;
+}
