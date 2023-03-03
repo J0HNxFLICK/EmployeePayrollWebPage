@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Registration</title>
     <link rel="stylesheet" href="../Css/RegistrationFormStyles.css">
-    <script src="../Js/DataBinder.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    
 </head>
 <body>
     <header class="Header">
@@ -35,13 +36,13 @@
                 <div class="Content">
                     <label class="LabelText">Profile Image</label>
                     <div class="RadioProfilepic">
-                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic1">
+                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic1" value="1">
                         <img class="image" src="../assets/Ellipse -1.png" alt="Pic1">
-                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic2">
+                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic2" value="2">
                         <img class="image" src="../assets/Ellipse -2.png" alt="Pic2">
-                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic3">
+                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic3" value="3">
                         <img class="image" src="../assets/Ellipse -4.png" alt="Pic3">
-                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic4">
+                        <input class="radioInput" type="radio" name="ProfilePic" id="ProfilePic4" value="4">
                         <img class="image" src="../assets/Ellipse -3.png" alt="Pic4">
                     </div>
                 </div>
@@ -49,9 +50,9 @@
                 <div class="Content">
                     <label class="LabelText">Gender</label>
                     <div class="RadioProfilepic">
-                        <input class="radioInput" type="radio" name="Gender" id="male">
+                        <input class="radioInput" type="radio" name="Gender" id="male" value="Male">
                         <span class="genderChoice">Male</span>
-                        <input class="radioInput" type="radio" name="Gender" id="female">
+                        <input class="radioInput" type="radio" name="Gender" id="female" value="Female">
                         <span class="genderChoice">Female</span>
                     </div>
                 </div>
@@ -59,22 +60,22 @@
                 <div class="Content">
                     <label class="LabelText">Department</label>
                     <div class="departmentCheckbox">
-                        <input class="Checkboxes" type="checkbox" name="Department" id="hr">
+                        <input class="Checkboxes" type="checkbox" name="Department" id="hr" value="HR">
                         <span class="departmentText">HR</span>
-                        <input class="Checkboxes" type="checkbox" name="Department" id="sales">
+                        <input class="Checkboxes" type="checkbox" name="Department" id="sales" value="Sales">
                         <span class="departmentText">Sales</span>
-                        <input class="Checkboxes" type="checkbox" name="Department" id="finance">
+                        <input class="Checkboxes" type="checkbox" name="Department" id="finance" value="Finance">
                         <span class="departmentText">Finance</span>
-                        <input class="Checkboxes" type="checkbox" name="Department" id="engineer">
+                        <input class="Checkboxes" type="checkbox" name="Department" id="engineer" value="Engineer">
                         <span class="departmentText">Engineer</span>
-                        <input class="Checkboxes" type="checkbox" name="Department" id="others">
+                        <input class="Checkboxes" type="checkbox" name="Department" id="others" value="Other">
                         <span class="departmentText">Others</span>
                     </div>
                 </div>
 
                 <div class="Content">
                     <label class="LabelText" for="salary">Salary</label>
-                    <select class="salarySelector" name="Salary" id="salary">
+                    <select class="salarySelector" name="Salary" id="salary" required>
                         <option value="Choose Salary">Choose Salary</option>
                         <option value="10000">10000</option>
                         <option value="20000">20000</option>
@@ -87,7 +88,7 @@
                 <div class="Content">
                     <label class="LabelText">Start Date</label>
                     <div class="DateSelector">
-                        <select class="calanderSelector" name="Day" id="day">
+                        <select class="calanderSelector" name="Day" id="day" required>
                             <option value="Day">Day</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -122,7 +123,7 @@
                             <option value="31">31</option>
                         </select>
     
-                        <select class="calanderSelector" name="Month" id="month">
+                        <select class="calanderSelector" name="Month" id="month" required>
                             <option value="Jan">January</option>
                             <option value="Feb">Febuary</option>
                             <option value="Mar">March</option>
@@ -137,7 +138,7 @@
                             <option value="Dec">December</option>
                         </select>
     
-                        <select class="calanderSelector" name="Year" id="year">
+                        <select class="calanderSelector" name="Year" id="year" required>
                             <option value="2010">2010</option>
                             <option value="2011">2011</option>
                             <option value="2012">2012</option>
@@ -158,19 +159,19 @@
 
                 <div class="NotesContent">
                     <label class="LabelText" for="notes">Notes</label>
-                    <textarea class="NotesInputStyle" name="Notes" id="notes"></textarea>
+                    <textarea class="NotesInputStyle" name="Notes" id="notes" required></textarea>
                 </div>
 
                 <div class="EndButtons">
                     <button class="Grey button">Cancel</button>
                     <div>
-                        <button type="submit" class="submitbutton button" onclick="DataCapture()">Submit</button>
+                        <button type="submit" class="submitbutton button" id="SubmitButton">Submit</button>
                         <button type="reset" class="Grey button">Reset</button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    
+    <script src="../Js/DataBinder.js"></script>
 </body>
 </html>
