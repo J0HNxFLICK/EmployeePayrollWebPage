@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Registration</title>
     <link rel="stylesheet" href="../Css/RegistrationFormStyles.css">
+    <script src="../Js/DataBinder.js"></script>
 </head>
 <body>
     <header class="Header">
@@ -29,7 +30,6 @@
                 <div class="Content">
                     <label class="LabelText" for="NameText">Name</label>
                     <input class="InputStyle" id="NameText" type="text" name="name">
-                    <error-output class="NameError" for ="NameText"></error-output>
                 </div>
 
                 <div class="Content">
@@ -164,7 +164,7 @@
                 <div class="EndButtons">
                     <button class="Grey button">Cancel</button>
                     <div>
-                        <button type="submit" class="submitbutton button">Submit</button>
+                        <button type="submit" class="submitbutton button" onclick="DataCapture()">Submit</button>
                         <button type="reset" class="Grey button">Reset</button>
                     </div>
                 </div>
