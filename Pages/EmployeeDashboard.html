@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration</title>
+    <title>Employee | Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <link rel="stylesheet" href="../Css/EmployeeDashboardStyles.css">
 </head>
 <body>
@@ -31,27 +32,34 @@
     <div class="DetailsContentParent">
         <div class="DetailsContent">
             <table class="MainTable">
-                <tr class="TableHeadders">
-                    <th class="ProfilePicColomn"></th>
-                    <th class="TableHeaderTextStyle NameColomn">NAME</th>
-                    <th class="TableHeaderTextStyle GenderColomn">GENDER</th>
-                    <th class="TableHeaderTextStyle DepartmentColomn">DEPARTMENT</th>
-                    <th class="TableHeaderTextStyle SalaryColomn">SALARY</th>
-                    <th class="TableHeaderTextStyle StartDateColomn">START DATE</th>
-                    <th class="TableHeaderTextStyle ActionsColomn">ACTIONS</th>
-                </tr>
+                <thead>
+                    <tr class="TableHeadders">
+                        <th class="ProfilePicColomn"></th>
+                        <th class="TableHeaderTextStyle NameColomn">NAME</th>
+                        <th class="TableHeaderTextStyle GenderColomn">GENDER</th>
+                        <th class="TableHeaderTextStyle DepartmentColomn">DEPARTMENT</th>
+                        <th class="TableHeaderTextStyle SalaryColomn">SALARY</th>
+                        <th class="TableHeaderTextStyle StartDateColomn">START DATE</th>
+                        <th class="TableHeaderTextStyle ActionsColomn">ACTIONS</th>
+                    </tr>
+                </thead>
 
-                <tr class="UserDataRow">
-                    <td class="ProfilePicColomn"><img src="../assets/Ellipse -1.png" alt="Pic1"></td>
-                    <td class="UserDataText NameColomn">Example</td>
-                    <td class="UserDataText GenderColomn">Female</td>
-                    <td class="DepartmentColomn"><div class="UserDataDept"><span class="DeptStyle">Sales</span><span class="DeptStyle">HR</span><span class="DeptStyle">Finance</span></div></td>
-                    <td class="UserDataText SalaryColomn">₹50,000</td>
-                    <td class="UserDataText StartDateColomn">02 Mar 2023</td>
-                    <td class="ActionsColomn"><div class="UserDataActions"><img src="../assets/delete-black-18dp.svg" alt="Delete"><img class="EditImage"src="../assets/create-black-18dp.svg" alt="Edit"></div></td>
-                </tr>
+                <tbody class="TableBody">
+                    <!-- <tr class="UserDataRow">
+                        <td class="ProfilePicColomn"><img src="../assets/Ellipse -1.png" alt="Pic1"></td>
+                        <td class="UserDataText NameColomn">Example</td>
+                        <td class="UserDataText GenderColomn">Female</td>
+                        <td class="DepartmentColomn"><div class="UserDataDept"><span class="DeptStyle">Sales</span><span class="DeptStyle">HR</span><span class="DeptStyle">Finance</span></div></td>
+                        <td class="UserDataText SalaryColomn">₹50,000</td>
+                        <td class="UserDataText StartDateColomn">02 Mar 2023</td>
+                        <td class="ActionsColomn"><div class="UserDataActions"><img src="../assets/delete-black-18dp.svg" alt="Delete"><img class="EditImage"src="../assets/create-black-18dp.svg" alt="Edit"></div></td>
+                    </tr> -->
+
+                </tbody>
+              
             </table>
         </div>
     </div>
+    <script src="../Js/DataRetriever.js"></script>
 </body>
 </html>

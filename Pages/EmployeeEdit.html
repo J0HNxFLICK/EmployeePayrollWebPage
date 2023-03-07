@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration</title>
+    <title>Employee | Edit</title>
     <link rel="stylesheet" href="../Css/RegistrationFormStyles.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     
@@ -25,7 +25,7 @@
             <form>
 
                 <div class="FormTitle">
-                    <p>Employee Payroll Form</p>
+                    <p>Employee Details Edit</p>
                 </div>
 
                 <div class="Content">
@@ -50,9 +50,9 @@
                 <div class="Content">
                     <label class="LabelText">Gender</label>
                     <div class="RadioProfilepic">
-                        <input class="radioInput" type="radio" name="Gender" id="male" value="Male">
+                        <input class="radioInput genderRadioButtons" type="radio" name="Gender" id="male" value="Male">
                         <span class="genderChoice">Male</span>
-                        <input class="radioInput" type="radio" name="Gender" id="female" value="Female">
+                        <input class="radioInput genderRadioButtons" type="radio" name="Gender" id="female" value="Female">
                         <span class="genderChoice">Female</span>
                     </div>
                 </div>
@@ -163,15 +163,75 @@
                 </div>
 
                 <div class="EndButtons">
-                    <button class="Grey button">Cancel</button>
+                    <!-- <button class="Grey button" onclick="EditCancel()">Cancel</button> -->
                     <div>
                         <button type="submit" class="submitbutton button" id="SubmitButton">Submit</button>
-                        <button type="reset" class="Grey button">Reset</button>
+                        <!-- <button type="reset" class="Grey button">Reset</button> -->
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <script src="../Js/DataBinder.js"></script>
+    <script src="../Js/DataRetriever.js"></script>
+
+    <script>
+
+        $(document).ready(function() {
+
+            let empId = localStorage.getItem('employeeData');
+            console.log(empId);
+            $.ajax({
+            url: "http://localhost:3000/EmployeeData/"+empId,
+            type: "GET",
+            dataType: "json",
+            success: function (retrievedData) {
+
+                    $('#NameText').val(retrievedData.Name);
+
+                    // selecting Profile Pic radio button based on value
+                    let profilePicRadioButton = document.getElementsByName('ProfilePic');
+                    for(let i = 0; i < profilePicRadioButton.length; i++)
+                    {
+                        if(profilePicRadioButton[i].value == retrievedData.ProfilePic)
+                        {
+                            profilePicRadioButton[i].checked = true;
+                            break;
+                        }
+                    }
+
+                    // selecting gender radio button 
+                    let genderRadioButton = document.getElementsByName('Gender');
+                    for(let i = 0; i < genderRadioButton.length; i++)
+                    {
+                        if(genderRadioButton[i].value == retrievedData.Gender)
+                        {
+                            genderRadioButton[i].checked = true;
+                            break;
+                        }
+                    }
+
+                    // splitting Department string into array 
+                    let departments = retrievedData.Department.split(" ");
+                    $.each(departments, function(index, value) {
+
+                        $('input[name=Department][value="'+value+'"]').prop('checked', true);
+
+                    });
+
+                    $('select[name=Salary]').val(retrievedData.Salary);
+
+                    var startDate = retrievedData.StartDate.split(" ");
+                    $('select[name=Day]').val(startDate[0]);
+                    $('select[name=Month]').val(startDate[1]);
+                    $('select[name=Year]').val(startDate[2]);
+
+                    $('#notes').val(retrievedData.Notes);
+                }
+
+            });
+  
+        });
+
+    </script>
 </body>
 </html>

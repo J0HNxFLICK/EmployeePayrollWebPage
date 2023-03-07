@@ -1,34 +1,24 @@
 {
   "EmployeeData": [
     {
-      "Name": "Nirmal Arun Ashish Kommini",
-      "ProfilePic": "2",
+      "Name": "Nirmal",
+      "ProfilePic": "../assets/Ellipse -2.png",
       "Gender": "Male",
-      "Department": "Sales Finance Engineer",
-      "Salary": "30000",
-      "StartDate": "5 Apr 2014",
-      "Notes": "asjdlakjsdlkjalksdad",
+      "Department": "HR Sales",
+      "Salary": "50000",
+      "StartDate": "16 Jul 2016",
+      "Notes": "testtest",
       "id": 1
     },
     {
-      "Name": "Test Entry 2",
-      "ProfilePic": "1",
-      "Gender": "Female",
-      "Department": "HR Sales Engineer Other",
-      "Salary": "50000",
-      "StartDate": "9 Sep 2018",
-      "Notes": "alkjslkjalksjdlkajlksd\na;kljsdl;ak;lskd;lkasdad",
+      "Name": "J0HN_FLICK",
+      "ProfilePic": "../assets/Ellipse -2.png",
+      "Gender": "Male",
+      "Department": "HR Sales Finance Engineer Other",
+      "Salary": "40000",
+      "StartDate": "16 Jul 2014",
+      "Notes": "XZxasdasdasdasd",
       "id": 2
-    },
-    {
-      "Name": "Workin ",
-      "ProfilePic": "3",
-      "Gender": "Female",
-      "Department": "Sales Engineer",
-      "Salary": "Choose Salary",
-      "StartDate": "4 Jun 2010",
-      "Notes": "",
-      "id": 3
     }
   ]
 }

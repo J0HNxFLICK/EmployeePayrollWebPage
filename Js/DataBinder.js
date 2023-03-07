@@ -1,5 +1,5 @@
 $('#SubmitButton').click(function(){
-    let userName = document.getElementById('NameText').value;
+    let userName = $('#NameText').val();
     // console.log(userName);
 
     let radioButton = document.querySelector('input[name="ProfilePic"]:checked');
@@ -19,7 +19,7 @@ $('#SubmitButton').click(function(){
             selectedCheckboxValues.push(checkBoxes[i].value)
         }
     }
-    // console.log(selectedCheckboxValues.toString());
+    // console.log(selectedCheckboxValues);
 
     let selectedDepartment = selectedCheckboxValues.join(' ');
 
